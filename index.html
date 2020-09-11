@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: rgba(000, 000, 000, .7);
+        }
+
+        .banner {
+            width: 950px;
+            height: 600px;
+            overflow: hidden;
+            /* overflow-x: scroll; */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        ul {
+            position: relative;
+            width: 3800px;
+            height: 100%;
+            margin: 0 auto;
+            left: 0px;
+        }
+
+        li {
+            float: left;
+            position: relative;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <ul>
+            <li><img class="li_img" src="img/1.jpg"></li>
+            
+        </ul>
+    </div>
+</body>
+<script>
+    var ul = document.getElementsByTagName('ul')[0];
+    var timeid = null;
+    var li_img=document.getElementsByTagName('img')[0];
+    var index=0;
+    var arr=['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg']
+    timeid=setInterval(function(){
+        index++;
+        if(index>=arr.length){
+            index=0;
+        }
+        li_img.src=arr[index];
+    },1000);
+    
+   
+</script>
+
+</html>
